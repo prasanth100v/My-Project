@@ -20,4 +20,21 @@
 | 🛡 **Grype**          | Vulnerability scanner | 👉 Matches SBOM packages with CVE databases            | Detects known vulnerabilities   |
 
 
+* 🔐 Why did you choose shift-left security?
+    * Catch issues early → `cheaper to fix`
+    * Reduces `production vulnerabilities`
+    * Improves `developer accountability`
 
+* 📜 What is SBOM and why did you generate it?
+    * List of all dependencies
+    * Helps in vulnerability tracking
+
+* 🐳 How do you secure Docker images?
+    * Minimal base images (`Alpine`)
+    * Scan images (Trivy)
+    * Remove unused packages
+    * Use `non-root user`
+
+* ☁️ Why use Amazon EKS instead of ECS?
+    * Kubernetes flexibility
+    * Better ecosystem (`Helm`, `GitOps`, `service mesh`)
