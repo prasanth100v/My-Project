@@ -11,9 +11,9 @@
    * ✅ Linting (`code style & mistakes`) and unit testing (`code functionality`) for both client and server ( `Frontend + Backend` )
    * 📊 Static code analysis using `SonarQube` to ensure code quality and reliability
 
- * 🐳 Once the code passes all checks, I Build and containerize the application using `Docker`
- * 🔍 Before pushing the image, I perform an additional `image vulnerability scan` using `Trivy` and
- * 📜 Generate a `Software Bill of Materials` (SBOM) using `Anchore` to ensure supply chain transparency and compliance..
+  * 🐳 Once the code passes all checks, I Build and containerize the application using `Docker`
+  * 🔍 Before pushing the image, I perform an additional `image vulnerability scan` using `Trivy` and
+  * 📜 Generate a `Software Bill of Materials` (SBOM) using `Anchore` to ensure supply chain transparency and compliance..
 
 * For deployment, I implemented a `GitOps-based` approach:
   * 🔄 Dynamically update `Kubernetes manifests` with the `new image tag` and deploying the application to `Amazon EKS`.
@@ -22,7 +22,7 @@
 * From an optimization and governance perspective:
   * ⚡ Security scans are executed in `parallel` to reduce build time.
   * 🛑 The pipeline supports `policy-based enforcement`, where `high/critical vulnerabilities` can block deployments in production
-  * Overall, the pipeline ensures `early risk detection`, `consistent code quality`, `secure artifact generation`, and automated, reliable deployments.
+  * 🚀 Overall, the pipeline ensures `early risk detection`, `consistent code quality`, `secure artifact generation`, and automated, reliable deployments.
 
 ---
 
@@ -34,7 +34,7 @@
   * 🔄 Consistent, automated, and reliable deployments → `Reduced deployment failures by ~25%`
   * 🛡 Eliminated risk of long-lived credentials using `OIDC`
 
- * Overall, the pipeline ensures `secure`, `scalable`, and `automated delivery` with `strong governance` and `production-grade reliability`.
+ * ⚡ Overall, the pipeline ensures `secure`, `scalable`, and `automated delivery` with `strong governance` and `production-grade reliability`.
 
 ---
 
