@@ -12,6 +12,7 @@
 * Anchore -- is a `container security platform` that uses `Syft` for `SBOM` generation and `Grype` for `vulnerability scanning`, enabling policy-based security enforcement in `CI/CD pipelines` .
 
 ## ⚙️ Anchore Components
+
 | 🧩 **Component**      | 📖 **Purpose**        | 🧠 **How It Works**                                  | 💡 **Why It Matters**           |
 | --------------------- | --------------------- | ---------------------------------------------------=-- | ------------------------------- |
 | 🔍 **Anchore Engine** | Full platform         | 👉 Image analysis + enforces security policies       | Blocks insecure images in CI/CD |
