@@ -14,7 +14,7 @@
 ## ⚙️ Anchore Components
 
 | 🧩 **Component**      | 📖 **Purpose**        | 🧠 **How It Works**                                  | 💡 **Why It Matters**           |
-| --------------------- | --------------------- | ---------------------------------------------------=-- | ------------------------------- |
+| --------------------- | --------------------- | ------------------------------------------------------ | ------------------------------- |
 | 🔍 **Anchore Engine** | Full platform         | 👉 Image analysis + enforces security policies       | Blocks insecure images in CI/CD |
 | 📦 **Syft**           | SBOM generator        | 👉 Extracts all packages from container image         | Visibility into dependencies    |
 | 🛡 **Grype**          | Vulnerability scanner | 👉 Matches SBOM packages with CVE databases            | Detects known vulnerabilities   |
