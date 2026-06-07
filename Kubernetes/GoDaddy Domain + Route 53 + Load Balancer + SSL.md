@@ -194,6 +194,7 @@ kubectl apply -f service.yaml
 ## Verify in AWS
  * Go to: AWS Console → EC2 → Load Balancers → Your CLB → Listeners
  * You should see:
+
 | Load Balancer Port | Instance Port |
 | ------------------ | ------------- |
 | 80                 | 80            |
