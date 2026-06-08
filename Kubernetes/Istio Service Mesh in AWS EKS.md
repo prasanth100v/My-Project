@@ -128,7 +128,7 @@ kubectl patch svc tracing -n istio-system -p '{"spec":{"type":"LoadBalancer"}}'
 ```hcl
 kubectl get svc -n istio-system
 ```
-⏳ Wait 1–3 minutes and AWS will create separate ELBs for Kiali and Jaeger.
+ * ⏳ Wait 1–3 minutes and AWS will create separate ELBs for Kiali and Jaeger.
 
 
 ### ✅ Your Jaeger LoadBalancer is created successfully
@@ -148,17 +148,18 @@ http://aaf41b9f7bbc3404eb4e87ed493f516d-346224214.ap-south-1.elb.amazonaws.com:2
 ---
 
 ## 📈 Benefits of Istio in EKS
-
-| Feature               | Benefit                         |
-| --------------------- | ------------------------------- |
-| 🕸️ Service Mesh      | Manages Microservices           |
-| 🔒 mTLS               | Secure Service Communication    |
-| 🚦 Traffic Routing    | Canary & Blue-Green Deployments |
-| 📊 Observability      | Metrics & Tracing               |
-| ⚖️ Load Balancing     | Smart Traffic Distribution      |
-| 🛡️ Circuit Breaking  | Prevent Cascading Failures      |
-| 💥 Fault Injection    | Test Failure Scenarios          |
-| 🔐 Policy Enforcement | Security Controls               |
+| 🧩 **Feature**           | 🎯 **Benefit**                  | 📖 **Description**                                               | 💡 **Real-World Use Case**                    |
+| ------------------------- | ------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------- |
+| 🕸️ **Service Mesh**      | Manages Microservices           | Provides a dedicated layer for `service-to-service communication` | Large microservices architectures              |
+| 🔒 **mTLS**               | Secure Service Communication    | Encrypts and authenticates traffic between services             |` Zero Trust networking    `                     |
+| 🚦 **Traffic Routing**    | `Canary` & `Blue-Green Deployments` | Controls how traffic is distributed `across application versions` | Safe production releases                  |
+| 📊 **Observability**      | Metrics & Tracing               | Collects metrics, logs, and distributed traces                  | Monitoring with `Prometheus`, `Grafana`, and `Jaeger` |
+| ⚖️ **Load Balancing**     | Smart Traffic Distribution      | Supports `ROUND_ROBIN`, `LEAST_CONN`, and other `algorithms  `  | Improved performance and availability           |
+| 🛡️ **Circuit Breaking**  | Prevent Cascading Failures       |  `Stops traffic to unhealthy services  `                        | Prevents system-wide outages                     |
+| 💥 **Fault Injection**    | Test Failure Scenarios          | Simulates `delays` and `errors`                                 | Chaos engineering and resilience testing        |
+| 🔐 **Policy Enforcement** | Security Controls               | Enforces `authentication` and `authorization policies `         | Service access control                          |
+| 🔁 **Retries & Timeouts** | Improved Reliability            | Automatically `retries failures` and `limits request duration`  | Handles transient network issues                |
+| 🌍 **Traffic Splitting**  | Progressive Delivery            | Routes traffic by `percentage`                                  | A/B testing and canary releases                 |
 
 ---
 
