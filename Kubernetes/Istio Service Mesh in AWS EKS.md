@@ -93,6 +93,20 @@ kubectl get pods -n istio-system
 | Kiali      | Service Mesh View |
 | Jaeger     | Tracing           |
 
+### Access Kiali and Jaeger through Load Balancer
+ * Kiali
+```hcl
+kubectl patch svc kiali -n istio-system -p '{"spec":{"type":"LoadBalancer"}}'
+```
+ * Jaeger
+```hcl
+kubectl patch svc tracing -n istio-system -p '{"spec":{"type":"LoadBalancer"}}'
+```
+ * Check:
+```hcl
+kubectl get svc -n istio-system
+```
+  * Wait 1–3 minutes and AWS will create separate ELBs for Kiali and Jaeger.
 
 ## 📈 Benefits of Istio in EKS
 | Feature            | Benefit                         |
@@ -134,12 +148,3 @@ Istiod Control Plane
     ▼
 Prometheus + Grafana + Kiali
 ```
-
-
-
-
-
-
-
-
-
