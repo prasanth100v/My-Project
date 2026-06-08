@@ -93,6 +93,8 @@ kubectl get pods -n istio-system
 | Kiali      | Service Mesh View |
 | Jaeger     | Tracing           |
 
+---
+
 ### Access Kiali and Jaeger through Load Balancer
  * Kiali
 ```hcl
@@ -107,6 +109,22 @@ kubectl patch svc tracing -n istio-system -p '{"spec":{"type":"LoadBalancer"}}'
 kubectl get svc -n istio-system
 ```
   * Wait 1–3 minutes and AWS will create separate ELBs for Kiali and Jaeger.
+
+### Your Jaeger LoadBalancer is created successfully:
+```hcl
+aaf41b9f7bbc3404eb4e87ed493f516d-346224214.ap-south-1.elb.amazonaws.com
+```
+
+### Your Kiali LoadBalancer is created successfully:
+```hcl
+http://aaf41b9f7bbc3404eb4e87ed493f516d-346224214.ap-south-1.elb.amazonaws.com:20001
+```
+ * Common Issue :
+     * Many AWS Classic Load Balancers created by Kubernetes only listen on: `Port 80`, `Port 443`
+     * while Kiali is serving on: `Port 20001`
+     * In that case, add `20001` port on LoadBalancer
+
+---
 
 ## 📈 Benefits of Istio in EKS
 | Feature            | Benefit                         |
